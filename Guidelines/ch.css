@@ -1,0 +1,193 @@
+/* Reset and fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.p {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow-x: hidden;
+  animation: fadeInBody 1s ease;
+}
+
+/* Fade in body on load */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Background container */
+.background-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass effect card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 1000px;
+  width: 90%;
+  animation: slideInCard 1s ease;
+}
+
+/* Slide in effect for the card */
+@keyframes slideInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main heading */
+.main-heading {
+  font-size: 48px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ffe259, #ffa751);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  animation: fadeDown 1.2s ease;
+}
+
+/* Fade down animation for heading */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button container */
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button styling */
+.full-btn {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #2a2a2a;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 25px;
+  width: 240px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: dropIn 0.7s forwards;
+}
+
+/* Staggered drop-in effect */
+.full-btn:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.full-btn:nth-child(2) {
+  animation-delay: 0.45s;
+}
+.full-btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.full-btn:nth-child(4) {
+  animation-delay: 0.75s;
+}
+.full-btn:nth-child(5) {
+  animation-delay: 0.9s;
+}
+.full-btn:nth-child(6) {
+  animation-delay: 1.05s;
+}
+.full-btn:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.full-btn:nth-child(8) {
+  animation-delay: 1.35s;
+}
+.full-btn:nth-child(9) {
+  animation-delay: 1.5s;
+}
+.full-btn:nth-child(10) {
+  animation-delay: 1.65s;
+}
+.full-btn:nth-child(11) {
+  animation-delay: 1.8s;
+}
+.full-btn:nth-child(12) {
+  animation-delay: 1.95s;
+}
+.full-btn:nth-child(13) {
+  animation-delay: 2.1s;
+}
+.full-btn:nth-child(14) {
+  animation-delay: 2.25s;
+}
+
+/* Drop-in animation */
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.full-btn:hover {
+  background-color: #203545;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 32px;
+  }
+
+  .full-btn {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .glass-card {
+    padding: 20px;
+  }
+}

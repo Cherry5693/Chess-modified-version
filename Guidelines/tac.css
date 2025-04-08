@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.t {
+  /* display: flex;
+  justify-content: center;
+  align-items: start;*/
+  height: 100vh;
+  padding-top: 50px;
+  font-family: Arial, sans-serif;
+  background: url("https://www.transparenttextures.com/patterns/diag-stripes-light.png"),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  background-size: 50px 50px;
+  background-color: #313030;
+  overflow-y: auto;
+}
+
+.main-container {
+  display: flex;
+  max-width: 1100px;
+  align-items: flex-start;
+  /* flex-direction: column; */
+  /* position: relative; */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  /* margin: 0 auto; */
+  margin-left: 50px;
+}
+
+.icon {
+  /* margin-left: 20px; */
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 5px solid #6b4f3a;
+}
+
+.icon span {
+  font-size: 14px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2),
+    -6px -6px 16px rgba(255, 255, 255, 0.3);
+}
+
+.info-box {
+  width: 90%;
+  max-width: 700px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+.info-box.hide {
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.back-btn {
+  padding: 12px 30px;
+  background-color: rgba(255, 99, 71, 0.95);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  /* margin-left: 80px; */
+  margin-bottom: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn:hover {
+  transform: scale(1.08);
+  background-color: #ff5722;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .back-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
