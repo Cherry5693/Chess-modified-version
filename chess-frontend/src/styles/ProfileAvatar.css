@@ -1,0 +1,49 @@
+.profile-avatar {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar-tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 6px;
+  border-radius: 4px;
+  position: absolute;
+  top: 110%; /* Tooltip appears below the avatar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.avatar-tooltip:before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Position the arrow just above the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent; /* Arrow points upward */
+}
+
+.profile-avatar:hover .avatar-tooltip {
+  visibility: visible;
+}
+
+.tooltip-username {
+  font-weight: bold;
+}
+
+.tooltip-email {
+  font-size: 0.9rem;
+  color: #ccc;
+}
